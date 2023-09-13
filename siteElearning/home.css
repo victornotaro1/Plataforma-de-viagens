@@ -1,0 +1,97 @@
+* { margin: 0;}
+.navbar-brand{
+font-family: 'Montserrat', sans-serif;
+}
+
+.galeria{
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    aspect-ratio: 15/16;
+    min-width: 0;
+    flex:1 1 10px;
+    object-fit: cover;
+    opacity: 100;
+    transition: .5s;
+}
+img:hover{
+    flex: 1 1 100px;
+    opacity: 1;
+}
+.container{
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    width: 800px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 20px;
+}
+.card{
+    overflow: hidden;
+    flex-grow: 1;
+    display: inline-block;
+    margin:8px;
+    vertical-align: top;
+    place-items: center;
+    align-items: flex-start;
+    height: 300px;
+    aspect-ratio: 0.5s;
+    transition: all 0.5s ease-in-out;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.card img{
+    border-radius: 0rem;
+    grid-column: 1;
+    grid-row: 1 / span 3;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.content{
+    grid-row: 2;
+    grid-column: 1;
+    opacity: 0;
+    width: 90%;
+    transform: translaFteY(100px);
+    grid-column: 1;
+    transition: all 0.5s ease-in-out;
+    transition-delay: 0.2s;
+    font-family: 'Montserrat', sans-serif;
+}
+.card:hover{
+    flex-grow: 3
+}
+.card:hover .content{
+    opacity: 1;
+    transform: translateX(0);
+}
+.galeria:hover .content{
+    opacity: 1;
+    transform: translateX(0);
+}
+.veaga{
+    text-align: center;
+    font-family: 'Cormorant', serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+h2 {
+    margin-top: 10px;
+    font-size: 1.25rem;
+}
+p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+  
